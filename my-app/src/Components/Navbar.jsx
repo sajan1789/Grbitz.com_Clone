@@ -1,16 +1,11 @@
-import { Flex, Spacer ,Box,ButtonGroup,Heading,Button} from '@chakra-ui/react'
+import { Flex, Spacer ,Box,ButtonGroup,Heading,Button,VStack,Text,FormControl,
+  FormLabel,Input,Checkbox,
+  FormErrorMessage,
+  FormHelperText} from '@chakra-ui/react'
 import {ChevronDownIcon} from '@chakra-ui/icons'
+import {Menu,MenuButton, MenuList,MenuItem,Portal,Link,HStack} from '@chakra-ui/react'
+import { extendTheme } from "@chakra-ui/react"
 
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,Portal,Link,HStack
-  } from '@chakra-ui/react'
 function Navbar(){
     return (
         <Flex minWidth='max-content' alignItems='center' gap='2' bg='#00253c' p='4' h='75px'>
@@ -37,19 +32,39 @@ function Navbar(){
         <Spacer />
         <HStack color="white" spacing='30' mr='50px'>
         <Link >Espanol</Link>
-        <Link>List Your Property</Link>
+        <Link>List your property</Link>
         <Link>Support</Link>
         <Link>Trip</Link>
-        <Menu>
+        <Menu h='600px'>
   <MenuButton>Sign in</MenuButton>
-  <Portal>
-    <MenuList>
-      <MenuItem>Menu 1</MenuItem>
-      <MenuItem>New Window</MenuItem>
-      <MenuItem>Open Closed Tab</MenuItem>
-      <MenuItem>Open File</MenuItem>
+    <MenuList w="full" color='black'>
+      <Box h='auto' >
+        <VStack p='5'>
+          <Heading as='h2' size='sm'>Sign in</Heading>
+          <Text>Enter your email and password to login</Text>
+          </VStack>
+          <VStack spacing='-3' >
+          <FormControl p='5'>
+  <FormLabel>Email address</FormLabel>
+  <Input type='email' rounded='none'/>
+</FormControl > 
+<FormControl p='5'>
+  <FormLabel>Password</FormLabel>
+  <Input type='password' rounded='none'/>
+</FormControl>
+<HStack justify='space-between' w='full' p='5'>
+<Checkbox>Remember me.</Checkbox>
+
+<Button variant='link' color='blue'fontSize='12px'>Forget Password?</Button>
+</HStack >
+  <HStack >
+    <Button mt='25px' colorScheme='blue' rounded='none' w='265px'>Signin</Button>
+    </HStack>    
+          </VStack>
+           
+      </Box>
     </MenuList>
-  </Portal>
+
 </Menu>
         </HStack>
        
