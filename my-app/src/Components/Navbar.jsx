@@ -31,7 +31,7 @@ function Navbar(){
         </Box>
         <Spacer />
         <HStack color="white" spacing='30' mr='50px'>
-        <Link >Espanol</Link>
+        <Link _hover={{color:"teal"}}>Espanol</Link>
         <Link>List your property</Link>
         <Link>Support</Link>
         <Link>Trip</Link>
@@ -43,7 +43,7 @@ function Navbar(){
           <Heading as='h2' size='sm'>Sign in</Heading>
           <Text>Enter your email and password to login</Text>
           </VStack>
-          <VStack spacing='-3' >
+          <VStack spacing='-3'>
           <FormControl p='5'>
   <FormLabel>Email address</FormLabel>
   <Input type='email' rounded='none'/>
