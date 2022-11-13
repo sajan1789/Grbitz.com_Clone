@@ -14,7 +14,7 @@ function Navbar(){
         </Box>
         <Box>
         <Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant='flushed' color='white'>
+  <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant='flushed' color='white' _hover={{color:"teal"}}>
     More Travel
   </MenuButton>
   <MenuList>
@@ -32,11 +32,11 @@ function Navbar(){
         <Spacer />
         <HStack color="white" spacing='30' mr='50px'>
         <Link _hover={{color:"teal"}}>Espanol</Link>
-        <Link>List your property</Link>
-        <Link>Support</Link>
-        <Link>Trip</Link>
+        <Link _hover={{color:"teal"}}>List your property</Link>
+        <Link _hover={{color:"teal"}}>Support</Link>
+        <Link _hover={{color:"teal"}}>Trip</Link>
         <Menu h='600px'>
-  <MenuButton>Sign in</MenuButton>
+  <MenuButton _hover={{color:"teal"}}>Sign in</MenuButton>
     <MenuList w="full" color='black'>
       <Box h='auto' >
         <VStack p='5'>
